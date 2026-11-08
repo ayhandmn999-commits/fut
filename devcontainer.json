@@ -1,0 +1,9 @@
+{
+  "name": "FutbolClip AI",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y ffmpeg fonts-inter && pip install -r requirements.txt && cp -n .env.example .env",
+  "postAttachCommand": "python app.py",
+  "forwardPorts": [8080],
+  "portsAttributes": { "8080": { "label": "FutbolClip AI", "onAutoForward": "openBrowser" } },
+  "hostRequirements": { "cpus": 2 }
+}
